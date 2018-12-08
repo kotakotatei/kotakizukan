@@ -16,7 +16,7 @@
     -ms-user-select: none;
     user-select: none;
     &.is-active {
-        box-shadow: 0 -4px 0 #C70044 inset;
+        border-bottom: 4px solid #C70044;
         color: #C70044;
     }
 }

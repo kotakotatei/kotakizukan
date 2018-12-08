@@ -118,6 +118,13 @@ body {
     font-size: 1.4rem;
     -webkit-font-smoothing: antialiased;
 }
+@media screen and (max-width: 500px) {
+    body {
+        width: 100%;    
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
 
 header, footer {
     background: #C70044;
