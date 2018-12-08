@@ -1,0 +1,22 @@
+///////////////////////////////////////////////
+// category tab
+///////////////////////////////////////////////
+
+.tab {
+    display: flex;
+}
+
+.tab__button {
+    flex: 1;
+    padding: 13px;
+    color: #666;
+    text-align: center;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &.is-active {
+        box-shadow: 0 -4px 0 #C70044 inset;
+        color: #C70044;
+    }
+}
