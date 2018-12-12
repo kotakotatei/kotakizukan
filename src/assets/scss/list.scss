@@ -45,9 +45,8 @@
 // トランジション用のとこ
 ///////////////////////////////////////////////
 .list {
-    // transition: opacity 1s ease;
     &-enter-active {
-        transition: opacity 1s ease;
+        transition: opacity 0.5s ease;
     }
     &-leave-active {
         position: absolute;

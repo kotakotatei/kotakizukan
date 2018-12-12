@@ -8,7 +8,7 @@
     </transition>
     <button class="accordion__button" 
     v-bind:class="{ 'is-open' : isOpen }" 
-    v-on:click="toggle">このいきものをみるよ</button>
+    v-on:click="toggle">{{ buttonText }}</button>
   </div>
 </template>
 
@@ -17,12 +17,18 @@ export default {
   name: 'accordion',
   data () {
     return {
-      isOpen: false
+      isOpen: false,
+      buttonText: 'このいきものをみるよ'
     }
   },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
+      if(this.isOpen) {
+        this.buttonText = 'もうみないよ'
+      } else {
+        this.buttonText = 'このいきものをみるよ'
+      }
     },
     beforeEnter(e) {
       e.style.height = '0';
