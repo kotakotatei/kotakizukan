@@ -8,7 +8,7 @@
       v-bind:class="{ 'is-active' : current == index }" 
       v-bind:key="index">{{ item.text }}</li>
     </ul>
-    <creatureList/>
+    <creatureList v-bind:currentCategory="currentCategory"></creatureList>
     <footer>@ KotakiMuseum All Rights Reserved.</footer>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       current: 0,
-      currentCategory: null,
+      currentCategory: 'contemporary',
       tabItem: [
        { id: 0, category: 'contemporary', text: '現生生物編' },
        { id: 1, category: 'ancient', text: '古生物編' }

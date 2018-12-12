@@ -4,6 +4,12 @@
 
 .tab {
     display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 #EAE1E4;
 }
 
 .tab__button {

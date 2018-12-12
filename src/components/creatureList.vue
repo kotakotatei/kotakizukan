@@ -1,6 +1,8 @@
 <template>
-  <ul class="list">
-    <li class="list__item" v-for="(list, index) in creature" v-bind:key="index">
+  <transition-group tag="ul" class="list" name="list" mode="out-in">
+    <li class="list__item" 
+    v-for="(list, index) in creature" v-bind:key="index" 
+    v-if="list.category == currentCategory">
       <p class="copy">{{ list.copy }}</p>
       <div class="name">
         <h2 class="name__main">{{ list.name }}</h2>
@@ -8,7 +10,7 @@
       </div>
       <accordion>
         <div class="inner" slot="body">
-          <img class="image" v-bind:src="getImg(index)" alt="なまえ">
+          <img class="image" v-bind:src="getImg(index)" v-bind:alt="list.name">
           <dl class="info">
             <dt class="info__title" v-if="list.category == 'contemporary'">平均寿命</dt>
             <dt class="info__title" v-if="list.category == 'ancient'">生きていた時代（地質時代）</dt>
@@ -21,7 +23,7 @@
         </div>
       </accordion>
     </li>
-  </ul>
+  </transition-group>
 </template>
 
 <script>
@@ -32,6 +34,7 @@ export default {
   components: {
     accordion
   },
+  props: ['currentCategory'],
   data () {
     return {
       creature: [
