@@ -1,0 +1,47 @@
+///////////////////////////////////////////////
+// reference list
+///////////////////////////////////////////////
+
+.list {
+    padding: 16px;
+    background: #EAE1E4;
+    color: #555;
+    line-height: 1.7;
+}
+.list__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    &::before, &::after {
+        display: block;
+        flex-grow: 1;
+        height: 2px;
+        background: #fff;
+        content: '';
+    }
+    &::before {
+        margin-right: 8px;
+    }
+    &::after {
+        margin-left: 8px;
+    }
+}
+.list__item {
+    padding-left: 1em;
+    text-indent: -1em;
+    &::before {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background: #999;
+        vertical-align: 4px;
+        content: '';
+    }
+}
+.link {
+    color: #555;
+}

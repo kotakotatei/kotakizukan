@@ -9,17 +9,20 @@
       v-bind:key="index">{{ item.text }}</li>
     </ul>
     <creatureList v-bind:currentCategory="currentCategory"></creatureList>
+    <referenceList></referenceList>
     <footer>@ KotakiMuseum All Rights Reserved.</footer>
   </div>
 </template>
 
 <script>
 import creatureList from './components/creatureList'
+import referenceList from './components/referenceList'
 
 export default {
   name: 'App',
   components: {
-    creatureList
+    creatureList,
+    referenceList
   },
   data() {
     return {
